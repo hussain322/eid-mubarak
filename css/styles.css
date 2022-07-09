@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: linear-gradient(to top, rgba(0, 0, 0,0), rgb(0, 0, 0)), url(../images/sunset-298850_1920.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 88vh;
+    position: relative;
+    overflow: hidden;
+}
+
+section{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    animation: floting 2s linear infinite;
+    animation-direction: alternate;
+}
+
+section h1{
+    font-size: 150px;
+    color: #fff;
+    font-family: 'Tangerine', cursive;
+    text-shadow: -8px 11px 1px #18171791;
+    position: relative;
+}
+
+section h1::before{
+    content: '';
+    position: absolute;
+    left: -128px;
+    top: -190px;
+    width: 200px;
+    height: 100px;
+    border-left: 15px solid #fff;
+    border-radius: 50px;
+    transform: rotate(320deg);
+}
+
+@keyframes floting{
+    0%{
+        left: 49%;
+    }
+    25%{
+        top: 49%;
+    }
+    75%{
+        left: 51%;
+    }
+    100%{
+        top: 51%;
+    }
+}
+
+.mosque{
+    background-image: url(../images/mosque.png);
+    min-height: 200px;
+    background-size: 450px;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    position: absolute;
+    left: 0;
+    bottom: -140px;
+    width: 100%;
+    animation: anim 20s linear infinite;
+}
+
+.mosque::before{
+    content: '';
+    background-image: url(../images/mosque.png);
+    min-height: 400px;
+    background-size: 850px;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    width: 100%;
+    opacity: .7;
+    animation: anim 20s linear infinite;
+    animation-direction: reverse;
+}
+@keyframes anim{
+    0%{
+     background-position: -100px;
+    }
+    100%{
+        background-position: 1600px;
+    }
+}
+
+.particles-js-canvas-el{
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-height: 80vh;
+}
